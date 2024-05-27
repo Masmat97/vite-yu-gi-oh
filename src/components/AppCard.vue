@@ -5,7 +5,7 @@ export default {
   components: {
     ProductCard
   },
- 
+
   data() {
     return {
       products: [
@@ -194,7 +194,7 @@ export default {
 <template>
   <div class="products">
     <div v-for="elemento in products" class="productCard">
-      <img :src="elemento.card_images.image_url_small" alt="">
+      <img :src="elemento.card_images[0].image_url_small" alt="">
       <p>{{ elemento.name }}</p>
     </div>
   </div>
@@ -205,15 +205,14 @@ export default {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  
   margin-top: 2rem;
-  background-color: red;
 }
 
 .productCard {
-  width: 25%;
-  padding: 1rem;
-  
+  width: 15%;
+  padding: 3rem;
+  background-color: red;
+  margin: 2rem;
 }
 
 .productCard>img {
