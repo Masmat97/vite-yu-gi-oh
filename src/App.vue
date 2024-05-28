@@ -21,9 +21,9 @@ export default {
   },
   methods: {
     getPersonaggi() {
-      axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0" + this.searchString).then(risultato =>{
-        this.store.personaggi = risultato.data.results;
-
+      axios.get("https://db.ygoprodeck.com/api/v7/cardinfo.php?num=40&offset=0" + this.searchString).then(risultato => {
+        this.store.carte = risultato.data.data;
+        console.log(risultato.data.data)
       });
 
     }
@@ -38,7 +38,8 @@ export default {
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader/>
+  <input type="text">
   <AppMain />
 </template>
 

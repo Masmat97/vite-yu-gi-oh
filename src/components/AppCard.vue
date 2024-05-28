@@ -1,11 +1,10 @@
 <script>
 
-import ProductCard from './ProductCard.vue';
 import store from '../data/store.js';
 
 export default {
   components: {
-    ProductCard
+    
   },
   props: {
         character: Object
@@ -30,7 +29,10 @@ export default {
       <img :src="elemento.card_images[0].image_url_small" alt="">
       <h3>{{ elemento.name }}</h3>
       <p>{{ elemento.type }}</p>
+      <p>{{ elemento.archetype }}</p>
+
     </div>
+    
   </div>
 
 </template>
