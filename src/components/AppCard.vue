@@ -7,7 +7,9 @@ export default {
   components: {
     ProductCard
   },
-
+  props: {
+        character: Object
+    },
   data() {
     return {
       store,
@@ -23,14 +25,14 @@ export default {
 </script>
 
 <template>
-  <!-- <div class="products">
-    <div v-for="elemento in oggetto" class="productCard">
+  <div class="products">
+    <div v-for="elemento in store.carte" class="productCard">
       <img :src="elemento.card_images[0].image_url_small" alt="">
       <h3>{{ elemento.name }}</h3>
       <p>{{ elemento.type }}</p>
     </div>
-  </div> -->
-{{ store.carte }}
+  </div>
+
 </template>
 
 <style scoped>

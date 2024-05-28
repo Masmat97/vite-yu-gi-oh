@@ -1,21 +1,29 @@
 <script>
-
+import AppCard from './AppCard.vue';
+import store from '../data/store.js';
 
 export default {
     name: "ProductCard",
-    props: ["prodotto"],
-    
+
+    components: {
+        AppCard,
+    },
+    data() {
+        return {
+            store
+        }
+    }
 }
+props: { }
+
 </script>
 
 <template>
-    <div class="productCard">
-        <img :src="prodotto.src" alt="">
-        <p>{{ prodotto.series }}</p>
-    </div>
+    <AppCard v-for="elemento in StorageEvent.carte" :character="personaggio" />
 </template>
 
 <style scoped>
 .productCard {
     width: 25%;
-}</style>
+}
+</style>
