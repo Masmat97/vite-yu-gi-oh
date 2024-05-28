@@ -27,5 +27,7 @@ export default {
 </template>
 
 <style scoped>
-
+.AppCard {
+background-color: yellow;
+}
 </style>

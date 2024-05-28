@@ -20,4 +20,8 @@ export default {
 <h1>Yu-Gi-Oh Api</h1>
 </template>
 
-<style scoped></style>
+<style scoped>
+h1{
+    background-color: white;
+}
+</style>
